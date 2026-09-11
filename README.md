@@ -1,6 +1,5 @@
 # DVWA-Juiceshop-Homelab
-Web app security lab and Penetration Testin
-# Web App Security Home Lab — DVWA & OWASP Juice Shop
+## Web App Security Home Lab — DVWA & OWASP Juice Shop
 
 A personal home lab for practicing web application security concepts using two intentionally vulnerable applications: **Damn Vulnerable Web Application (DVWA)** and **OWASP Juice Shop**, both running locally via Docker on Kali Linux.
 
