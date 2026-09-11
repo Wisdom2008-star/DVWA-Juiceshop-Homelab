@@ -18,7 +18,7 @@ This confirms the app is actually running a real `ping` command behind the
 scenes using whatever we type into the box. That's the detail worth digging
 into next — if it just hands our input to the system shell, what happens if
 we sneak an *extra* command in alongside the IP?
-
+<img src="https://github.com/Wisdom2008-star/DVWA-Juiceshop-Homelab/blob/main/Command-Injection/Screenshots/Command%20injection%20easy%20pic%201.png">
 ## Step 2: View the source
 
 ```php
@@ -32,6 +32,7 @@ if( stristr( php_uname('s'), 'Windows NT') ) {
 
 echo "<pre>{$cmd}</pre>";
 ```
+<img src="https://github.com/Wisdom2008-star/DVWA-Juiceshop-Homelab/blob/main/Command-Injection/Screenshots/Command%20injection%20easy%20pic%202.png">
 
 **Why this is vulnerable:**
 
@@ -58,6 +59,7 @@ The `;` character is a shell command separator — it tells the shell "run
 this command, then run the next one," regardless of whether the first one
 succeeds. Since our input gets pasted straight into a shell command with no
 filtering, the server happily runs both `ping 127.0.0.1` **and** `whoami`.
+<img src="https://github.com/Wisdom2008-star/DVWA-Juiceshop-Homelab/blob/main/Command-Injection/Screenshots/Command%20injection%20easy%20pic%203.png">
 
 **Result:** the page shows the normal ping output, followed by an extra line:
 
