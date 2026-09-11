@@ -12,6 +12,7 @@ Same form as Low — "Ping a device" with a single IP input. Submitting a
 normal IP like `127.0.0.1` still works exactly as expected, producing a
 standard ping result. This tells us the underlying ping functionality
 hasn't changed — only the filtering around it has.
+<img src="https://github.com/Wisdom2008-star/DVWA-Juiceshop-Homelab/blob/main/Command-Injection/Screenshots/Command%20injection%20medium%20pic%201.png">
 
 ## Step 2: View the source
 
@@ -35,6 +36,7 @@ if( stristr( php_uname('s'), 'Windows NT') ) {
 
 echo "<pre>{$cmd}</pre>";
 ```
+<img src="https://github.com/Wisdom2008-star/DVWA-Juiceshop-Homelab/blob/main/Command-Injection/Screenshots/Command%20injection%20medium%20pic%202.png">
 
 **Why this is still vulnerable:**
 
@@ -62,6 +64,7 @@ line:
 ```
 www-data
 ```
+<img src="https://github.com/Wisdom2008-star/DVWA-Juiceshop-Homelab/blob/main/Command-Injection/Screenshots/Command%20injection%20medium%20pic%203.png">
 
 Exactly like on Low, `whoami` runs successfully and reveals the web server's
 user. The blacklist did nothing to stop this because `|` was never on its
