@@ -11,6 +11,7 @@
 Same "Ping a device" form as before. A normal IP like `127.0.0.1` still
 pings successfully, confirming the core functionality is unchanged — only
 the filtering has been tightened further.
+<img src="https://github.com/Wisdom2008-star/DVWA-Juiceshop-Homelab/blob/main/Command-Injection/Screenshots/Command%20injection%20high%20pic%201.png">
 
 ## Step 2: View the source
 
@@ -41,6 +42,7 @@ if( stristr( php_uname('s'), 'Windows NT') ) {
 
 echo "<pre>{$cmd}</pre>";
 ```
+<img src="https://github.com/Wisdom2008-star/DVWA-Juiceshop-Homelab/blob/main/Command-Injection/Screenshots/Command%20injection%20high%20pic%202.png">
 
 **Why this is still vulnerable:**
 
@@ -67,6 +69,7 @@ drop the space:
 ```
 www-data
 ```
+<img src="https://github.com/Wisdom2008-star/DVWA-Juiceshop-Homelab/blob/main/Command-Injection/Screenshots/Command%20injection%20high%20pic%20%203.png">
 
 The filter never matches because the exact string `'| '` (with a space)
 doesn't appear in our payload — only `|whoami`, which slides through
